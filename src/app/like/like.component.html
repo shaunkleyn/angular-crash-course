@@ -1,10 +1,9 @@
-<i class="fa-star fa-lg" [class.far]="!isSelected" [class.fas]="isSelected" (click)="onClick()"></i>
-
 <div class="panel panel-primary">
-	<div class="panel-heading">
-    <ng-content select=".heading"></ng-content>
-  </div>
 	<div class="panel-body">
     <ng-content select=".body"></ng-content>
+  </div>
+  <div class="panel-footer">
+    <i class="fas fa-heart" [class.active]="isActive" (click)="onLike()"></i>
+    <span class="ml-3">{{likesCount}}</span>
   </div>
 </div>
