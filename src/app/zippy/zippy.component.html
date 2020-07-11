@@ -1,9 +1,15 @@
-<div class="panel panel-white border-dark">
+<div class="panel panel-default">
   <div class="panel-heading" (click)="isExpanded = !isExpanded"
   [ngStyle]="{
-    'backgroundColor' : isExpanded ? '#ccc' : '#fff'
+    'backgroundColor' : isExpanded ? '#f5f5f5' : '#fff'
   }">
     {{ title }}
+    <span class="pull-right">
+      <i class="fas" [ngClass]="{
+        'fa-chevron-up' : isExpanded,
+        'fa-chevron-down' : !isExpanded
+      }"></i>
+    </span>
   </div>
 	<div class="panel-body" *ngIf="isExpanded">
     <ng-content></ng-content>
