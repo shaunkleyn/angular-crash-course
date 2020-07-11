@@ -1,9 +1,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-<like [likesCount]="tweet.likesCount" [isActive]="tweet.isActive">
-  <ng-container class="body">{{ tweet.body }}</ng-container>
-</like>
-
-<like [likesCount]="12" [isActive]="true">
-  <ng-container class="body">This is some other tweet</ng-container>
-</like>
+<div *ngIf="courses.length > 0">
+  List of courses
+</div>
+<div *ngIf="courses.length == 0">
+  No courses yet
+</div>
