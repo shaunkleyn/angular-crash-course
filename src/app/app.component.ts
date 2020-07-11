@@ -9,9 +9,10 @@ import { FavoriteChangeArgs } from './favorite/favorite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  post = {
-    title: 'Title',
-    isFavorite: true
+  tweet = {
+    body: 'Title',
+    isLiked: false,
+    likesCount: 0
   };
 
   title = 'favorite';
