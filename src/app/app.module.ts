@@ -1,15 +1,18 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AuthorsComponent } from './authors/authors.component';
-import { AuthorsService } from './authors.service';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, AuthorsComponent ],
-  bootstrap:    [ AppComponent ],
-  providers: [AuthorsService]
+  declarations: [
+    AppComponent,
+    FavoriteComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
