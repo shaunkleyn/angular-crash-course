@@ -11,10 +11,4 @@ export class AppComponent {
     isActive: false,
     likesCount: 0
   };
-
-  title = 'favorite';
-
-  likeChange(eventArgs: boolean) {
-    console.log('favorite changed: ' + eventArgs);
-  }
 }

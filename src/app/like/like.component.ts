@@ -8,11 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class LikeComponent {
   @Input('isActive') isActive: boolean;
   @Input('likesCount') likesCount: number;
-  @Output('likeChange') click = new EventEmitter()
 
   onLike() {
     this.likesCount += this.isActive ? -1 : 1;
     this.isActive = !this.isActive;
-    this.click.emit(this.isActive);
   }
 }
