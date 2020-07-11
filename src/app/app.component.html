@@ -1,1 +1,10 @@
-<hello></hello>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<h2>Favorite</h2>
+<favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChange($event)"></favorite>
+<bootstrap-panel>
+  <ng-container class="heading">Heading</ng-container>
+  <div class="body">
+    <h2>Body</h2>
+    <p>Some content</p>
+  </div>
+</bootstrap-panel>

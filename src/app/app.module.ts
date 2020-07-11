@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { TitleCasePipe } from './title-case.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, TitleCasePipe ],
+  declarations: [ AppComponent, FavoriteComponent, PanelComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
