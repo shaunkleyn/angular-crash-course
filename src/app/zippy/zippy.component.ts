@@ -6,12 +6,12 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./zippy.component.css']
 })
 export class ZippyComponent implements OnInit {
-  title: string;
-  isExpanded: boolean;
   constructor(private el: ElementRef) { }
 
+  title: string;
+  isExpanded: boolean;
+  
   ngOnInit() {
     this.title = this.el.nativeElement.title;
   }
-
 }
