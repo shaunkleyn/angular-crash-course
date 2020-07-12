@@ -32,6 +32,22 @@
       <input type="checkbox" ngModel name="isSubscribed"> Subscribe to list
     </label>
   </div>
+  <b>Select returning id's</b>
+  <div class="form-group">
+    <label for="ddContactMethod">Contact Method</label>
+    <select ngModel name="ddContactMethod" id="ddContactMethod" class="form-control">
+      <option *ngFor="let method of getContactMethods()" [value]="method.id">{{ method.name }}</option>
+    </select>
+  </div>
+  <b>Select returning objects</b>
+  <div class="form-group">
+    <label for="ddContactMethod2">Contact Method</label>
+    <select ngModel name="ddContactMethod2" id="ddContactMethod2" class="form-control">
+      <option *ngFor="let method of getContactMethods()" [ngValue]="method">{{ method.name }}</option>
+    </select>
+  </div>
+  <p>
     {{ varForForm.value | json }}
+  </p>   
   <button class="btn btn-primary" [disabled]="!varForForm.valid">Submit</button>
 </form>

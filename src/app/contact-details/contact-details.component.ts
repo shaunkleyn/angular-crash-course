@@ -14,5 +14,13 @@ export class ContactDetailsComponent {
   onSubmitMethod(from) {
     console.log('submit')
   }
+
+  getContactMethods() {
+    return [
+      { id: 1, name: 'Email'},
+      { id: 2, name: 'Phone'}
+    ]
+  }
+
   constructor() { }
 }
