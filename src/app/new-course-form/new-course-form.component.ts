@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormArray, FormControl } from '@angular/forms';
+import { FormGroup, FormArray, FormControl, AbstractControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-new-course-form',
+  selector: 'new-course-form',
   templateUrl: './new-course-form.component.html',
   styleUrls: ['./new-course-form.component.css']
 })
@@ -16,10 +16,16 @@ export class NewCourseFormComponent implements OnInit {
 
   addTopic(topic: HTMLInputElement) {
     (this.topics as FormArray).push(new FormControl(topic.value));
+    topic.value = '';
+  }
+
+  removeTopic(topic: AbstractControl) {
+    let index = this.topics.controls.indexOf(topic); 
+    this.topics.removeAt(index);
   }
 
   get topics() {
-    return this.form.get('topics');
+    return (this.form.get('topics') as FormArray);
   }
 
   ngOnInit() {
