@@ -11,7 +11,7 @@ export class UsernameValidators {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if(control.value === 'shaun')
-          resolve({cannotContainSpace: true});
+          resolve({shouldBeUnique: true});
         else resolve(null);
       }, 2000);
     })
