@@ -6,20 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-details.component.css']
 })
 export class ContactDetailsComponent {
-
+ contactMethods = [
+   { id: 1, name: 'Email'},
+      { id: 2, name: 'Phone'}
+ ];
   log(x) {
     console.log(x);
   }
 
   onSubmitMethod(from) {
     console.log('submit')
-  }
-
-  getContactMethods() {
-    return [
-      { id: 1, name: 'Email'},
-      { id: 2, name: 'Phone'}
-    ]
   }
 
   constructor() { }
