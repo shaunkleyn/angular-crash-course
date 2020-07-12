@@ -49,7 +49,7 @@
   <div class="radio">
     <label *ngFor="let method of getContactMethods()">
       <input ngModel type="radio" name="rbContactMethod" [value]="method.id">
-      {Email}
+      {{ method.name }}
     </label>
   </div>
   <p>
