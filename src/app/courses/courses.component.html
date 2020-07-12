@@ -10,8 +10,7 @@
       type="textbox" 
       id="name" 
       class="form-control">
-    <div *ngIf="name.touched && !name.valid" 
-      class="alert alert-danger">
+    <div *ngIf="name.touched && !name.valid" class="alert alert-danger">
         <div *ngIf="name.errors.required">Name is required.</div>
         <div *ngIf="name.errors.minlength">Name should be minimum {{ name.errors.minlength.requiredLength }} characters.</div>
       </div>
