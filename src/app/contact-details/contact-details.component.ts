@@ -10,5 +10,9 @@ export class ContactDetailsComponent {
   log(x) {
     console.log(x);
   }
+
+  onSubmitMethod(from) {
+    console.log('submit')
+  }
   constructor() { }
 }
